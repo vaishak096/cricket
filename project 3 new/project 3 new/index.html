@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Legends Hub</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <header class="header">
+        <h1 class="header-title">Cricket Legends Hub</h1>
+        <p class="header-description">Explore the world of cricket and learn about your favorite players</p>
+    </header>
+
+    
+    <section class="featured-players" id="players">
+        <h2>Featured Players</h2>
+        <div class="container">
+            <div class="player-profile"onclick="showOnMap('player1')">
+                <img src="images/sachin.jpg" alt="Player 1" class="player-image">
+                <div class="player-info">
+                    <h2>SACHIN TENDULKAR</h2>
+                    <p><strong>BATSMAN  </strong>
+                    <p><strong>Team:</strong> INDIA</p>
+                    <div class="stats-achievements">
+                        <div class="career-stats">
+                            <h3>Career Statistics</h3>
+                            <ul>
+                                <li>Games Played: TEST:200 , ODI:463, T20I:1 </li>
+                                <li>RUNS: TEST:15921 , ODI:1846, T20I:10</li>
+                                <li>100s: TEST:51, ODI:49, T20I: -- </li>
+                                <li>50s: : TEST:68, ODI:96,T20i; -- </li>
+                            </ul>
+                        </div>
+                        <div class="achievements">
+                            <h3>Notable Achievements</h3>
+                            <ul>
+                                <li>Arjuna Award (1994)</li>
+                                <li>Rajiv Gandhi Khel Ratna Award (1997)</li>
+                                <li>Padma Shri (1998)</li>
+                                <li>Padma Vibhushan (2008)</li>
+                                <li>Bharat Ratna (2014)</li>
+                            </ul>
+                            <a href="#map"><button class="details-button"  onclick="openProfile('player1')" href="#map">View Hometown</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="player-profile"onclick="showOnMap('player2')">
+                <img src="images/viv.jpg" alt="Player 1" class="player-image">
+                <div class="player-info">
+                    <h2> VIV RICHARDS</h2>
+                    <p><strong>Position:</strong> Forward</p>
+                    <p><strong>Team:</strong> The Strikers</p>
+                    <div class="stats-achievements">
+                        <div class="career-stats">
+                            <h3>Career Statistics</h3>
+                            <ul>
+                                <li>Games Played: TEST:121 , ODI:187, T20I:--</li>
+                                <li>RUNS: TEST:8540 , ODI:6721, T20I:--</li>
+                                <li>100s: TEST:24, ODI:11, T20I:--</li>
+                                <li>50s: : TEST:45,ODI:45,T20i:--</li>
+                            </ul>
+                        </div>
+                        <div class="achievements">
+                            <h3>Notable Achievements</h3>
+                            <ul>
+                                <li>First batsman to score a test century at 150 strike rate</li>
+                                <li>Most Player-of-Series awards</li>
+                                <li>Most Player-of-Match awards</li>
+                            </ul>
+                            <a href="#map"><button class="details-button"  onclick="openProfile('player2')" href="#map">View Hometown</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="player-profile"onclick="showOnMap('player3')">
+                <img src="images/ricky.jpeg" alt="Player 1" class="player-image">
+                <div class="player-info">
+                    <h2>RICKY POINTING</h2>
+                    <p><strong>BATSMAN</strong></p>
+                    <p><strong>Team:</strong> AUSTRALIA</p>
+                    <div class="stats-achievements">
+                        <div class="career-stats">
+                            <h3>Career Statistics</h3>
+                            <ul>
+                                <li>Games Played: TEST:158 , ODI:375, T20I:17</li>
+                                <li>RUNS: TEST:13378 , ODI:13704, T20I:401</li>
+                                <li>100s: TEST:41, ODI:30, T20I:--</li>
+                                <li>50s: : TEST:62,ODI:82,T20i:2</li>
+                            </ul>
+                        </div>
+                        <div class="achievements">
+                            <h3>Notable Achievements</h3>
+                            <ul>
+                                <li>3 World Cups as a captain</li>
+                                <li>Player of the Decade 2000-2009</li>
+                                <li>7 times ICC TEST Mace winner</li>
+                            </ul>
+                            <a href="#map"><button class="details-button"  onclick="openProfile('player3')" href="#map">View Hometown</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="player-profile"onclick="showOnMap('player4')">
+                <img src="images/virat.jpg" alt="Player 1" class="player-image">
+                <div class="player-info">
+                    <h2>VIRAT KOHLI</h2>
+                    <p><strong>Position:</strong> Forward</p>
+                    <p><strong>Team:</strong> The Strikers</p>
+                    <div class="stats-achievements">
+                        <div class="career-stats">
+                            <h3>Career Statistics</h3>
+                            <ul>
+                                <li>Games Played: TEST:117* , ODI:295*, T20I:125</li>
+                                <li>RUNS: TEST:9035*, ODI:13906*, T20I:4188</li>
+                                <li>100s: TEST:29*, ODI:50*, T20I:1</li>
+                                <li>50s: : TEST:31*,ODI:72*,T20i;38</li>
+                            </ul>
+                        </div>
+                        <div class="achievements">
+                            <h3>Notable Achievements</h3>
+                            <ul>
+                                <li>First Cricketer to win all 4 ICC Trophies</li>
+                                <li>The Most Individual 100s in ODI</li>
+                                <li>ICC Test mace three consecutive times</li>
+                            </ul>
+                            <a href="#map"><button class="details-button"  onclick="openProfile('player4')" href="#map">View Hometown</button></a>
+                        </div>
+                    </div>
+                </div>
+            
+           
+            
+            
+             
+            </div>
+    </section>
+
+
+    
+    <section class="map-section" id="map">
+        <h2>Player Hometowns</h2>
+        <div id="mapContainer"></div>
+    </section>
+    <section id="topMatches" class="top-matches">
+        <h2>Top Matches</h2>
+        <div class="match-container">
+           
+            <div class="match-card">
+                <video class="match-video" width="320" height="180" controls poster="path/to/match1-thumbnail.jpg">
+                    <source src="videoplayback.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="match-info">
+                    <h3>India vs Pakistan</h3>
+                    <p>At 31/4 in pursuit of Pakistan's 160, it looked like India were out of contention for good, before a magical innings from Virat Kohli turned it around 🤩.</p>
+                </div>
+            </div>
+    
+           
+            <div class="match-card">
+                <video class="match-video" width="320" height="180" controls poster="path/to/match2-thumbnail.jpg">
+                    <source src="videoplayback (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="match-info">
+                    <h3>INDIA vs AUSTRALIA</h3>
+                    <p>Virat Kohli guided his side into the semi-finals of the 2016 T20 World Cup with a superb unbeaten 82* against Australia in Mohali.</p>
+                </div>
+            </div>
+    
+        
+        </div>
+    </section>
+    
+    
+    <section id="fanZone" class="fan-zone">
+        <h2>Fan Zone</h2>
+    
+        
+        <div class="story-submission">
+            <h3>Share Your Favorite Player Story</h3>
+            <form id="storyForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="player">Favorite Player:</label>
+                <input type="text" id="player" name="player" required>
+    
+                <label for="story">Your Story:</label>
+                <textarea id="story" name="story" rows="4" required></textarea>
+    
+                <button type="submit">Submit Story</button>
+            </form>
+    
+           
+            <div id="storiesDisplay" class="stories-display">
+                <h3>Fan Stories</h3>
+                <ul id="storiesList">
+                    
+                </ul>
+            </div>
+        </div>
+    
+       
+        <div class="voting-section">
+            <h3>Vote for the Greatest Player of All Time</h3>
+            <div class="vote-options">
+                <button onclick="vote('Sachin Tendulkar')">Sachin Tendulkar</button>
+                <button onclick="vote('Viv richards')">Viv richards</button>
+                <button onclick="vote('Ricky Ponting')">Ricky Ponting</button>
+                <button onclick="vote('Virat Kohli')">Virat Kohli</button>
+            </div>
+            <p id="voteMessage">Choose your favorite player!</p>
+        </div>
+    </section>
+    
+</body>
+</html>
